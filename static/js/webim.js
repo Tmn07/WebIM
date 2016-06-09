@@ -1021,9 +1021,11 @@ var sendText = function() {
 		return;
 	}
 	var options = {
+		from : curUserId,
 		to : to,
 		msg : msg,
-		type : "chat"
+		type : "chat",
+		// time : new Date().getTime(),
 	};
 	// 群组消息和个人消息的判断分支
 	if (curChatUserId.indexOf(groupFlagMark) >= 0) {
@@ -1046,6 +1048,13 @@ var sendText = function() {
 	setTimeout(function() {
 		textSending = false;
 	}, 1000);
+
+	//ajax送给后台，后台存数据库
+	// console.log(options);
+    $.post("./lib/main.php",{
+        "data": options
+    	})
+    
 };
 var pictype = {
 	"jpg" : true,
@@ -1058,7 +1067,9 @@ var send = function ( e ) {
 		tar = e.target || e.srcElement;
 
 	var fI = $('#fileInput');
+	// console.log(tar);
 	fI.val('').attr('data-type', tar.getAttribute('type')).click();
+	// console.log(fI);
 };
 $('#fileInput').on('change', function() {
 
@@ -1069,11 +1080,20 @@ $('#fileInput').on('change', function() {
 		case 'audio':
 			sendAudio();
 			break;
+		case 'data':
+			getData();
+			break;
 		default:
 			sendFile();
 			break;
 	};
 });
+
+//导出聊天记录时调用方法 ajax 返回?
+var getData = function(){
+	alert("mdzz");
+	console.log('mdzz');
+}
 
 //发送图片消息时调用方法
 var sendPic = function() {
@@ -1488,7 +1508,7 @@ var appendMsg = function(who, contact, message) {
 	if (contactLi == null) {
 		createMomogrouplistUL(who, message);
 	}
-	console.log(contact);
+	// console.log(contact);
 	// 消息体 {isemotion:true;body:[{type:txt,msg:ssss}{type:emotion,msg:imgdata}]}
 	var localMsg = null;
 	if (typeof message == 'string') {
