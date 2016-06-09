@@ -1062,6 +1062,21 @@ var pictype = {
 	"png" : true,
 	"bmp" : true
 };
+
+// 获取展示聊天记录
+var showMsg = function () {
+
+	var options = {
+		from : curUserId,
+		to : curChatUserId,
+	};
+	$.post("./lib/record.php",{
+        "data": options
+    	},function(data){
+    		console.log(data);
+    	})
+}
+
 var send = function ( e ) {
 	var e = (e || window.event),
 		tar = e.target || e.srcElement;

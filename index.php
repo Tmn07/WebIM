@@ -164,7 +164,7 @@
 					<a class="chat02_title_btn ctb03" title="选择图片" onclick="send()" type='img' href="#"></a>
 					<input id='sendAudioInput' style='display:none'/>
 					<a class="chat02_title_btn ctb02" title="选择语音" onclick="send()" href="#" type='audio'></a>
-                    <a class="chat02_title_btn ctb04" title="导出聊天记录" onclick="send()" href="#" type="data"></a>
+                    <a class="chat02_title_btn ctb04" title="导出聊天记录" onclick="showMsg()" href="#" type="data"></a>
 					<!--<input id='sendFileInput' class='emim-hide'/>
 					<a class="chat02_title_btn ctb04" title="选择文件" onclick="send()" href="#"></a>-->
 					<label id="chat02_title_t"></label>

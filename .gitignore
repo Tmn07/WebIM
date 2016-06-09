@@ -3,4 +3,6 @@
 
 .idea
 
+static/js/easemob.im.config.js
+
 resource/*
