@@ -1344,3 +1344,23 @@ footer {
 .emim-msg-status {
     color: rgb(255, 42, 0);
 }
+
+/*=================聊天记录==============*/
+.record_content	{
+	height: 458px;
+	width: 542px;
+	margin: 0 auto;
+	overflow-x: none;
+	overflow-y: auto;
+}
+.chat02_bar li a {
+	display: block;
+	width: 85px;
+	height: 27px;
+	text-align: center;
+	line-height: 27px;
+	color: #fff;
+	background: #4177A6;
+	text-decoration: none;
+	border: solid 1px #000;
+}

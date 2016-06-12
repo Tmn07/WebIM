@@ -138,7 +138,7 @@
 
         <div id="rightTop" style="height: 78px;"></div>
         <!-- 聊天页面 -->
-        <div class="chatRight">
+        <div class="chatRight" id="chat">
             <div id="chat01">
                 <div class="chat01_title">
                     <ul class="talkTo">
@@ -164,7 +164,7 @@
 					<a class="chat02_title_btn ctb03" title="选择图片" onclick="send()" type='img' href="#"></a>
 					<input id='sendAudioInput' style='display:none'/>
 					<a class="chat02_title_btn ctb02" title="选择语音" onclick="send()" href="#" type='audio'></a>
-                    <a class="chat02_title_btn ctb04" title="导出聊天记录" onclick="showMsg()" href="#" type="data"></a>
+                    <a class="chat02_title_btn ctb04" title="聊天记录" onclick="showMsg()" href="#" type="data"></a>
 					<!--<input id='sendFileInput' class='emim-hide'/>
 					<a class="chat02_title_btn ctb04" title="选择文件" onclick="send()" href="#"></a>-->
 					<label id="chat02_title_t"></label>
@@ -196,6 +196,23 @@
                 </div>
 
                 <div style="clear: both;"></div>
+            </div>
+        </div>
+
+        <div class="chatRight" id="record" style="display:none;">
+            <div>
+                <div class="chat01_title">
+                    <ul class="talkTo">
+                        <li id="talkTo_record"><a href="#"></a></li>
+                    </ul>
+                </div>
+                <div class="record_content">
+                </div>
+                <div class="chat02_bar">
+                    <ul>
+                        <li style="right: 5px; top: 5px;"><a href="javascript:void(0);" onclick="hidden_record();">返回</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 

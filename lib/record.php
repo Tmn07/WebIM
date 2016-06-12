@@ -27,6 +27,6 @@ while($row = mysql_fetch_assoc($res2)){
     $emp_info[] = $row;
 }
 
-var_dump($emp_info);
+echo json_encode($emp_info);
 
 ?>

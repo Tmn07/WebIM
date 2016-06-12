@@ -1065,7 +1065,7 @@ var pictype = {
 
 // 获取展示聊天记录
 var showMsg = function () {
-
+	show_record();
 	var options = {
 		from : curUserId,
 		to : curChatUserId,
@@ -1073,8 +1073,44 @@ var showMsg = function () {
 	$.post("./lib/record.php",{
         "data": options
     	},function(data){
-    		console.log(data);
+    		var dataArray = JSON.parse(data);
+    		console.log(dataArray);
+    		var talkTo = $('#talkTo_record').find('a');
+    		talkTo[0].innerHTML = '与' + dataArray[0].to + '的聊天记录';
+    		var html = '';
+			for (var i = 0;i<dataArray.length;i++) {
+				if(dataArray[i].from == curUserId){
+					html = html + '<div style="text-align: right;"><p1>'
+		    			+ dataArray[i].from +'   <span></span>   </p1><p2>'
+		    			+ dataArray[i].time +'<b></b><br></p2><p3 style="background-color: rgb(235, 235, 235);"'
+		    			+ 'classname="chat-content-p3" class="chat-content-p3">'
+		    			+ dataArray[i].text +'</p3></div>';
+				} else {
+					html = html + '<div style="text-align: left;"><p1>'
+		    			+ dataArray[i].from +'   <span></span>   </p1><p2>'
+		    			+ dataArray[i].time +'<b></b><br></p2><p3 style="background-color: rgb(235, 235, 235);"'
+		    			+ 'classname="chat-content-p3" class="chat-content-p3">'
+		    			+ dataArray[i].text +'</p3></div>';
+				}
+				console.log(i);
+			}
+    		var recordDiv = $("#record").find(".record_content");
+    		recordDiv[0].innerHTML = html;
+    		// console.log(recordDiv);
+    		// console.log(dataArray[0]);
     	})
+}
+
+//显示聊天记录页面
+var show_record = function () {
+	document.getElementById('chat').style.display = "none";
+	document.getElementById('record').style.display = "block";
+}
+
+//隐藏聊天记录页面
+var hidden_record = function () {
+	document.getElementById('record').style.display = "none";
+	document.getElementById('chat').style.display = "block";
 }
 
 var send = function ( e ) {
