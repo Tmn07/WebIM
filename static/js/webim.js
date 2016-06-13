@@ -1053,7 +1053,11 @@ var sendText = function() {
 	// console.log(options);
     $.post("./lib/main.php",{
         "data": options
-    	})
+    	}
+    	// ,function(data){
+    	// 	console.log(data);
+    	// }
+    	)
     
 };
 var pictype = {
@@ -1092,7 +1096,7 @@ var showMsg = function () {
 		    			+ 'classname="chat-content-p3" class="chat-content-p3">'
 		    			+ dataArray[i].text +'</p3></div>';
 				}
-				console.log(i);
+				// console.log(i);
 			}
     		var recordDiv = $("#record").find(".record_content");
     		recordDiv[0].innerHTML = html;
