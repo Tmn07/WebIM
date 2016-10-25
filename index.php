@@ -85,49 +85,13 @@
             <div id="contractlist11"
                 style="height: 492px; overflow-y: auto; overflow-x: auto;">
                 <div class="accordion" id="accordionDiv">
-                    <div class="accordion-group">
+                    <div class="accordion-group" style="border-bottom: none;">
                         <div class="accordion-heading">
                             <a id="accordion1" class="accordion-toggle" data-toggle="collapse" data-parent="#accordionDiv" href="#collapseOne">我的好友 </a>
                         </div>
                         <div id="collapseOne" class="accordion-body collapse in">
                             <div class="accordion-inner" id="contractlist">
                                 <ul id="contactlistUL" class="chat03_content_ul"></ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a id="accordion2" class="accordion-toggle collapsed"
-                                data-toggle="collapse" data-parent="#accordionDiv"
-                                href="#collapseTwo">我的群组</a>
-                        </div>
-                        <div id="collapseTwo" class="accordion-body collapse">
-                            <div class="accordion-inner" id="contracgrouplist">
-                                <ul id="contracgrouplistUL" class="chat03_content_ul"></ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-group">
-                        <div class="accordion-heading">
-                            <a id="accordion3" class="accordion-toggle collapsed"
-                                data-toggle="collapse" data-parent="#accordionDiv"
-                                href="#collapseThree">陌生人</a>
-                        </div>
-                        <div id="collapseThree" class="accordion-body collapse">
-                            <div class="accordion-inner" id="momogrouplist">
-                                <ul id="momogrouplistUL" class="chat03_content_ul"></ul>
-                            </div>
-                        </div>
-                    </div>
-					<div id='em-cr' class="accordion-group">
-                        <div class="accordion-heading">
-                            <a id="accordion4" class="accordion-toggle collapsed"
-                                data-toggle="collapse" data-parent="#accordionDiv"
-                                href="#collapseFour">聊天室</a>
-                        </div>
-                        <div id="collapseFour" class="accordion-body collapse">
-                            <div class="accordion-inner" id="chatRoomList">
-                                <ul id="chatRoomListUL" class="chat03_content_ul"></ul>
                             </div>
                         </div>
                     </div>
